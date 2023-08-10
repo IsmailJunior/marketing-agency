@@ -1,0 +1,237 @@
+:root {
+	--hero-image: 600px;
+}
+
+* {
+	font-family: sans-serif;
+	list-style: none;
+	text-decoration: none;
+	color: black;
+	padding: 0;
+	margin: 0;
+}
+
+body {
+	background-color: aliceblue;
+	overflow-x: hidden;
+}
+
+.container {
+	padding: 0 10%;
+}
+
+/* Navigation Section */
+header {
+	position: sticky;
+	top: 0;
+	z-index: 2;
+	margin: 0 auto;
+	box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+	background-color: white;
+}
+
+.navigation {
+	padding: 20px 0;
+}
+
+.navigation .nav_items {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.navigation .links {
+	position: relative;
+	display: flex;
+	justify-content: space-between;
+	gap: 50px;
+}
+
+.navigation .links .nav_link {
+	z-index: 1;
+}
+
+.navigation .panel {
+	position: absolute;
+	width: 100vw;
+	height: 400px;
+	top: 40px;
+	left: -145px;
+	border: none;
+	outline: none;
+	background-color: white;
+	z-index: 1;
+	transition: 300ms all ease;
+}
+
+.hide_dialog {
+	opacity: 0;
+}
+
+.navigation .account_items {
+	display: flex;
+	justify-content: space-between;
+	gap: 50px;
+}
+
+.navigation .account_items button {
+	background-color: rebeccapurple;
+	border: 1px rebeccapurple solid;
+	border-radius: 15px;
+	color: white;
+	width: 100px;
+	height: 30px;
+	cursor: pointer;
+	transition: 300ms all ease;
+}
+
+.navigation .account_items button:hover {
+	background-color: white;
+	color: black;
+}
+
+/* Hero Section */
+.hero_section {
+	display: flex;
+	background-color: white;
+	padding-top: 80px;
+	height: 530px;
+	overflow-y: hidden;
+	z-index: -1;
+}
+
+.hero_section .left_section .title {
+	position: relative;
+	font-size: 50px;
+	z-index: 1;
+}
+
+.hero_section .left_section h1::before {
+	position: absolute;
+	content: '';
+	top: 5px;
+	left: 0;
+	width: 400px;
+	height: 50px;
+	background-color: yellow;
+	display: inline-block;
+	z-index: -1;
+}
+
+.hero_section .left_section h1::after {
+	position: absolute;
+	content: '';
+	top: 65px;
+	left: 95px;
+	width: 200px;
+	height: 50px;
+	background-color: yellow;
+	display: inline-block;
+	z-index: -1;
+}
+
+.hero_section .left_section p {
+	font-size: 20px;
+	margin: 25px 0;
+	font-weight: 100;
+}
+
+.hero_section .hero_image {
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-image: url('./assets/Female.png');
+	margin-right: 150px;
+	width: var(--hero-image);
+	height: var(--hero-image);
+	z-index: 1;
+}
+
+.hero_section .blocks {
+	position: absolute;
+	top: 150px;
+	right: 130px;
+}
+
+.hero_section .blocks .block {
+	position: relative;
+	padding: 20px;
+	margin: 20px;
+	width: 200px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.3);
+	border-radius: 10px;
+	background-color: white;
+	cursor: pointer;
+	border: 1px rebeccapurple solid;
+}
+
+.hero_section .blocks .block::before {
+	position: absolute;
+	content: '';
+	width: 35px;
+	height: 35px;
+	top: 20px;
+	right: -15px;
+	background-color: rebeccapurple;
+	border-radius: 50%;
+	display: inline-block;
+}
+
+.create_account_divsion {
+	position: relative;
+}
+
+.create_account_divsion input {
+	width: 300px;
+	height: 25px;
+	padding: 5px;
+	font-size: 20px;
+	border: 1px rgb(184, 183, 183) solid;
+	border-radius: 10px;
+}
+
+.create_account_divsion button {
+	position: absolute;
+	top: -4px;
+	left: 200px;
+	width: 300px;
+	height: 45px;
+	padding: 5px;
+	border: none;
+	border-radius: 25px;
+	box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
+	background-color: rebeccapurple;
+	color: white;
+	cursor: pointer;
+}
+
+.create_account_divsion button:hover {
+	background-color: blueviolet;
+}
+
+/* Brands Section */
+
+.brands_section {
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+	opacity: 0.6;
+	margin-top: 40px;
+}
+
+.brands_section h4 {
+	font-weight: 100;
+}
+
+.brands ul {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	filter: grayscale();
+	gap: 20px;
+}
+
+.brands .logo_brand {
+	width: 70px;
+}
+
