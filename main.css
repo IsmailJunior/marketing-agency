@@ -2,6 +2,8 @@
 	--hero-image: 600px;
 }
 
+/* Reset */
+
 * {
 	font-family: sans-serif;
 	list-style: none;
@@ -16,8 +18,27 @@ body {
 	overflow-x: hidden;
 }
 
+/* Utilities */
+
 .container {
 	padding: 0 10%;
+}
+
+.center_row {
+	display: flex;
+	justify-content: center;
+}
+
+.center_column {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+.row {
+	display: flex;
+	align-items: start;
+	gap: 20px;
 }
 
 /* Navigation Section */
@@ -40,32 +61,16 @@ header {
 	align-items: center;
 }
 
-.navigation .links {
-	position: relative;
+.navigation .links_container {
 	display: flex;
 	justify-content: space-between;
 	gap: 50px;
 }
 
-.navigation .links .nav_link {
+.navigation .links_container .nav_link {
+	position: relative;
+	display: inline-block;
 	z-index: 1;
-}
-
-.navigation .panel {
-	position: absolute;
-	width: 100vw;
-	height: 400px;
-	top: 40px;
-	left: -145px;
-	border: none;
-	outline: none;
-	background-color: white;
-	z-index: 1;
-	transition: 300ms all ease;
-}
-
-.hide_dialog {
-	opacity: 0;
 }
 
 .navigation .account_items {
@@ -209,14 +214,20 @@ header {
 	background-color: blueviolet;
 }
 
+.hero_section .create_account_divsion p {
+	font-size: 15px;
+	color: grey;
+}
+
+
 /* Brands Section */
 
 .brands_section {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-	opacity: 0.6;
 	margin-top: 40px;
+	margin-bottom: 60px;
 }
 
 .brands_section h4 {
@@ -228,6 +239,7 @@ header {
 	align-items: center;
 	justify-content: space-between;
 	filter: grayscale();
+	opacity: 0.6;
 	gap: 20px;
 }
 
@@ -235,3 +247,69 @@ header {
 	width: 70px;
 }
 
+
+.brands_section .specs_divison {
+	font-size: 1.4em;
+	margin-top: 70px;
+}
+
+.brands_section .specs_divison .title {
+	position: relative;
+}
+
+
+.brands_section .specs_divison .title::before {
+	content: '';
+	display: block;
+	position: absolute;
+	top: 5px;
+	right: 0;
+	width: 330px;
+	height: 35px;
+	background-color: yellow;
+	z-index: -1;
+}
+
+.brands_section .specs_divison .two_column_list  {
+	margin-top: 70px;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	width: 80%;
+	gap: 20px;
+	font-size: 20px;
+}
+
+.brands_section .specs_divison .two_column_list i {
+	font-size: x-large;
+	color: rebeccapurple;
+}
+
+.brands_section .specs_divison .two_column_list .headline {
+	display: flex;
+	align-items: center;
+	gap: 20px;
+}
+
+.brands_section .specs_divison .two_column_list .description {
+	margin:35px 0;
+	font-weight: 100;
+	font-size: 0.9em;
+}
+
+.brands_section .specs_divison .two_column_list .notation {
+	margin:  40px 0;
+	font-weight: 600;
+	font-size: 15px;
+}
+
+.brands_section .specs_divison .two_column_list .notation span {
+	padding: 3px;
+	background-color: yellow;
+}
+
+/* Tools section */
+ .tools_section {
+	background-color: white;
+	height: 300px;
+ }
