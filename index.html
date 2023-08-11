@@ -6,7 +6,7 @@
 	<link rel="icon" type="image/x-icon" href="./assets/Logo.ico">
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-	<script src="script.js" defer></script>
+	<script src="rtl.js" defer></script>
 	<title>Home</title>
 </head>
 <body>
@@ -15,26 +15,30 @@
 			<ul class="nav_items">
 				<div class="links_container">
 				<li class="nav_link">
-					<a href="#">Brand</a>
+					<a class="brand" href="#">Brand</a>
 				</li>
 				<li class="nav_link">
-					<a href="#">Product</a>
+					<a class="product" href="#">Product</a>
 				</li>
 				<li class="nav_link">
-					<a href="#">Pricing</a>
+					<a class="pricing" href="#">Pricing</a>
 				</li>
 				<li class="nav_link">
-					<a href="#">Resources</a>
+					<a class="resources" href="#">Resources</a>
 				</li>
 				</div>
 				<div class="account_items">
 					<li>
-						<a href="#">Login</a>
+						<a class="login" href="#">Login</a>
 					</li>
 					<li>
-						<button class="primary_button_outline">Sign Up</button>
+						<button class="primary_button_outline sign-up">Sign Up</button>
 					</li>
 				</div>
+				<li class="switch_panel">
+						<label for="switch">Arabic</label>
+						<input id="switch" class="switch" type="checkbox">
+				</li>
 			</ul>
 		</nav>
 	</header>
@@ -45,7 +49,7 @@
 		<!-- Hero section start -->
 		<section class="hero_section container inner_space">
 			<div class="left_section">
-				<h1 class="title">Email marketing<br/>and beyond</h1>
+				<h1 class="title hero-title">Email marketing<br/>and beyond</h1>
 				<p>
 					An affordable, easy platform to send emails,<br/>
 					grow your list, and automate communication.
@@ -57,6 +61,19 @@
 			</div>
 			</div>
 			<div class="hero_image"></div>
+			<div class="blocks_conatiners">
+			<ul class="features_blocks">
+				<li class="block">
+					<h1>Email <br/>marketing</h1>
+				</li>
+				<li class="block">
+					<h1>Website <br/>builder</h1>
+				</li>
+				<li class="block">
+					<h1>Marketing <br/> automation</h1>
+				</li>
+			</ul>
+			</div>
 		</section>
 		<!-- Hero section end -->
 
@@ -321,6 +338,126 @@
 		<section class="price_section container center_column inner_space_extra">
 			<h1 class="notation title"><span>Unbeatable price for email marketing software</span></h1>
 			<p class="description mute_text">Plans and features to empower your business on every stage of its growth.</p>
+			<div class="price_divison">
+				<div class="price_blocks">
+					<div class="price_block">
+						<h1 class="sub-heading">FREE</h1>
+						<div class="pricing-divison space">
+							<h1 class="heading">$0</h1>
+						</div>
+						<div class="features_list">
+						<hr>
+							<ul class="space-around">
+								<h4>Including:</h4>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>Email marketing</span>
+								</li>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>Website builder</span>
+								</li>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>Connect a domain</span>
+								</li>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>List for up to 500 contacts</span>
+								</li>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>Landing pages</span>
+								</li>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>Signup and contact forms</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="price_block">
+						<h1 class="sub-heading off-white-text">PAID PLANS</h1>
+						<div class="pricing-divison space">
+							<h1 class="marker heading">$13.30</h1>
+						</div>
+						<div class="features_list">
+							<hr>
+							<ul class="space-around" id="middle_list">
+								<h4 class="off-white-text">Everything from Free and more:</h4>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>Marketing automation</span>
+								</li>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>List segmentation</span>
+								</li>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>Sales funnels</span>
+								</li>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>Lists for 500+ contacts</span>
+								</li>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>Webinars</span>
+								</li>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>Live chats</span>
+								</li>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>Ecommerce features</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+					<div class="price_block">
+						<h1 class="sub-heading">MAX<sup>2</sup></h1>
+						<div class="pricing-divison space">
+							<h1 class="heading">Custom pricing</h1>
+						</div>
+						<div class="features_list">
+							<hr>
+							<ul class="space-around">
+								<h4>Everything from paid and more:</h4>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>SMS marketing</span>
+								</li>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>Transactional emails</span>
+								</li>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>Account migration support</span>
+								</li>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>Unlimited users</span>
+								</li>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>Dedicated support</span>
+								</li>
+								<li class="space-around">
+									<i class="fa fa-check"></i>
+									<span>Single sign-on (SSO)</span>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<button class="primary_button_extra">VIEW ALL PLANS</button>
+		</section>
+		<section class="support_section container center inner_space">
+
 		</section>
 	</main>
 </body>
