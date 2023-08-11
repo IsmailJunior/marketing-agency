@@ -1,5 +1,18 @@
 :root {
 	--hero-image: 600px;
+	--space-top: 50px;
+	--space-top-2: 20px;
+	--space-bottom: 50px;
+	--extra-space-top: 100px;
+	--heading: x-large;
+	--headeing-2: large;
+	--healine: 50px;
+	--space-in: 10px;
+	--description: 15px;
+	--fotospace: 15px;
+	--thin: 600;
+	--primary: rebeccapurple;
+	--secondary: blueviolet;
 }
 
 /* Reset */
@@ -41,6 +54,39 @@ body {
 	gap: 20px;
 }
 
+.notation span {
+	padding: 3px;
+	background-color: yellow;
+}
+
+.heading {
+	font-size: var(--heading);
+}
+
+.heading-2 {
+	font-size: var(--headeing-2);
+}
+
+.details {
+	margin-top: var(--space-top-2);
+}
+
+.description {
+	margin-top: var(--space-top-2);
+	font-size: var(--description);
+	font-weight: 300;
+}
+
+.more_link {
+	color: var(--primary);
+	font-weight: var(--thin);
+	font-size: var(--fotospace);
+}
+
+.link:hover {
+	color: var(--secondary);
+}
+
 /* Navigation Section */
 header {
 	position: sticky;
@@ -80,8 +126,8 @@ header {
 }
 
 .navigation .account_items button {
-	background-color: rebeccapurple;
-	border: 1px rebeccapurple solid;
+	background-color: var(--primary);
+	border: 1px var(--primary) solid;
 	border-radius: 15px;
 	color: white;
 	width: 100px;
@@ -107,7 +153,7 @@ header {
 
 .hero_section .left_section .title {
 	position: relative;
-	font-size: 50px;
+	font-size: var(--healine);
 	z-index: 1;
 }
 
@@ -167,7 +213,7 @@ header {
 	border-radius: 10px;
 	background-color: white;
 	cursor: pointer;
-	border: 1px rebeccapurple solid;
+	border: 1px var(--primary) solid;
 }
 
 .hero_section .blocks .block::before {
@@ -177,7 +223,7 @@ header {
 	height: 35px;
 	top: 20px;
 	right: -15px;
-	background-color: rebeccapurple;
+	background-color: var(--primary);
 	border-radius: 50%;
 	display: inline-block;
 }
@@ -205,7 +251,7 @@ header {
 	border: none;
 	border-radius: 25px;
 	box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
-	background-color: rebeccapurple;
+	background-color: var(--primary);
 	color: white;
 	cursor: pointer;
 }
@@ -226,8 +272,8 @@ header {
 	display: flex;
 	flex-direction: column;
 	gap: 20px;
-	margin-top: 40px;
-	margin-bottom: 60px;
+	margin-top: var(--space-top);
+	margin-bottom: var(--space-bottom);
 }
 
 .brands_section h4 {
@@ -250,13 +296,12 @@ header {
 
 .brands_section .specs_divison {
 	font-size: 1.4em;
-	margin-top: 70px;
+	margin-top: var(--space-top);
 }
 
 .brands_section .specs_divison .title {
 	position: relative;
 }
-
 
 .brands_section .specs_divison .title::before {
 	content: '';
@@ -271,7 +316,7 @@ header {
 }
 
 .brands_section .specs_divison .two_column_list  {
-	margin-top: 70px;
+	margin-top: var(--space-top);
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
@@ -281,8 +326,8 @@ header {
 }
 
 .brands_section .specs_divison .two_column_list i {
-	font-size: x-large;
-	color: rebeccapurple;
+	font-size: var(--heading);
+	color: var(--primary);
 }
 
 .brands_section .specs_divison .two_column_list .headline {
@@ -303,13 +348,52 @@ header {
 	font-size: 15px;
 }
 
-.brands_section .specs_divison .two_column_list .notation span {
-	padding: 3px;
-	background-color: yellow;
+/* Tools section */
+
+ .tools_section {
+	padding-top: var(--extra-space-top);
+	background-color: white;
+	font-size: var(--heading);
+ }
+
+ .tools_section .people_divison {
+	margin-top: var(--space-top);
+	gap: var(--space-in);
+ }
+
+ .tools_section .people_divison .person_block {
+	position: relative;
+	width: 280px;
+	height: 180px;
+	padding-top: 20px;
+	overflow: hidden;
+ }
+
+ .tools_section .people_divison .person_block .person_image {
+	position: absolute;
+	top: 0;
+	right: -5px;
+	width: 200px;
+	filter: drop-shadow(-50px 50px 30px rgba(0,0,0,0.5));
+ }
+
+  .tools_section .people_divison .person_block .back_frame {
+	background-color: var(--primary);
+	 width: 200px;
+	 height: 180px;
+  }
+
+.tools_section .people_divison .details .link_block {
+	padding: 20px 0;
 }
 
-/* Tools section */
- .tools_section {
-	background-color: white;
-	height: 300px;
- }
+.tools_section .people_divison .details .list_block {
+	font-size: var(--fotospace);
+}
+
+.tools_section .people_divison .details .list_block ul li {
+	display: flex;
+	align-items: center;
+	gap: var(--space-in);
+	margin-top: var(--space-top-2);
+}
