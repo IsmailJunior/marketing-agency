@@ -61,6 +61,7 @@ const onlineMarketerComponent = document.querySelector( '.online-marketer-compon
 const marketingMangerComponent = document.querySelector( '.marketing-manger-component' );
 const listBlock = document.querySelectorAll( '.list-block' );
 const spec = document.querySelectorAll( '.spec' );
+const column = document.querySelectorAll( '.column' );
 const linkIcon = document.querySelectorAll( '.link-icon' );
 const emailMarkteingLink = document.querySelector( '.email-marketing-link' );
 const websiteBuilderLink = document.querySelector( '.website-builder-link' );
@@ -103,9 +104,9 @@ switchButton.addEventListener( 'click', ( event ) =>
 console.log( accountButton );
 if ( localStorage.getItem( 'arabic' ) !== null )
 {
-
 	linksContainer.classList.add( 'order' );
 	leftSection.classList.add( 'order' );
+	column.forEach( ( item ) => item.style.justifyContent = 'end' );
 	leftColumn.forEach( ( item ) => item.style.order = 2 );
 	spec.forEach( ( item ) => item.style.justifyContent = 'end' );
 	linkIcon.forEach( ( item ) => item.style.order = 2 );

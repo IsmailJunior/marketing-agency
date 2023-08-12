@@ -39,6 +39,11 @@ body {
 	background-color: var(--body-color);
 }
 
+.column
+
+.spec { 
+	display: flex;
+}
 /* Utilities */
 
 .rtl-text {
@@ -190,12 +195,7 @@ body {
 
 .column {
 	display: flex;
-	justify-content: end;
-}
-
-.spec {
-	display: flex;
-	z-index: 6;
+	justify-content: initial;
 }
 
 /* Navigation Section */
