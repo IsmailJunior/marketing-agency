@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@100;200;300;400;500;600;700&display=swap');
 :root {
-	--hero-image: 600px;
+	--hero-image: 500px;
 	--space: 50px;
 	--space-2: 20px;
 	--space-top: 50px;
@@ -303,6 +303,10 @@ header {
 	right: 100px;
 }
 
+.left {
+	left: 100px;
+}
+
 .hero_section .features_blocks .block {
 	position: relative;
 	width: 200px;
@@ -316,11 +320,10 @@ header {
 	box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
 }
 
-.hero_section .features_blocks .block::after {
+.hero_section .features_blocks .block .circle-block {
 	position: absolute;
-	content: '';
 	display: inline-block;
-	top: 45px;
+	top: 48px;
 	right: -15px;
 	width: 30px;
 	height: 30px;
@@ -328,12 +331,13 @@ header {
 	border-radius: 50%;
 }
 
-.hero_section .features_blocks .block:hover h1 {
-	color: var(--secondary);
+.circle-right {
+	right: initial;
+	left: -15px;
 }
 
-.hero_section .features_blocks .block:hover::after {
-	background-color: var(--secondary);
+.hero_section .features_blocks .block:hover h1 {
+	color: var(--secondary);
 }
 
 .hero_section .left_section .title {
@@ -353,14 +357,20 @@ header {
 	background-size: contain;
 	background-repeat: no-repeat;
 	background-image: url('./assets/Female.png');
-	margin-right: 160px;
 	width: var(--hero-image);
 	height: var(--hero-image);
-	transform: translateX(30px);
+	transform: translateX(50px);
+	margin-top: 20px;
+}
+
+.image-rtl {
+	margin-right: 0;
+	margin-left: 200px;
 }
 
 .create_account_divsion {
 	position: relative;
+	z-index: 3;
 }
 
 .create_account_divsion input {
@@ -372,7 +382,12 @@ header {
 	border-radius: 10px;
 }
 
-.create_account_divsion button {
+.input-left {
+	text-align: right;
+	margin-left: 250px;
+}
+
+ .account-button {
 	position: absolute;
 	top: -4px;
 	left: 200px;
@@ -385,6 +400,10 @@ header {
 	background-color: var(--primary);
 	color: white;
 	cursor: pointer;
+}
+
+.button-right {
+	left: 40px;
 }
 
 .create_account_divsion button:hover {
@@ -430,18 +449,6 @@ header {
 
 .brands_section .specs_divison .title {
 	position: relative;
-}
-
-.brands_section .specs_divison .title::before {
-	content: '';
-	display: block;
-	position: absolute;
-	top: 5px;
-	right: 0;
-	width: 330px;
-	height: 35px;
-	background-color: yellow;
-	z-index: -1;
 }
 
 .brands_section .specs_divison .two_column_list  {
