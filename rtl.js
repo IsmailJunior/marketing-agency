@@ -11,6 +11,10 @@ const heroDescription = document.querySelector( '.hero-description' );
 const accountButton = document.querySelector( '.account-button' );
 const emailInput = document.querySelector( '.email-input' );
 const accountDescription = document.querySelector( '.account-description' );
+const emailBlock = document.querySelector( '.email-block' );
+const websiteBlock = document.querySelector( '.website-block' );
+const marketingBlock = document.querySelector( '.marketing-block' );
+
 if ( localStorage.getItem( 'arabic' ) !== null )
 {
 	switchButton.checked = true;
@@ -41,6 +45,9 @@ if ( localStorage.getItem( 'arabic' ) !== null )
 	heroTitle.classList.add( 'rtl-text' );
 	heroDescription.classList.add( 'rtl-text' );
 	accountDescription.classList.add( 'rtl-text' );
+	emailBlock.classList.add( 'rtl-text' );
+	websiteBlock.classList.add( 'rtl-text' );
+	marketingBlock.classList.add( 'rtl-text' );
 	brandLink.innerHTML = 'شعار';
 	productLink.innerHTML = 'المنتجات';
 	pricingLink.innerHTML = 'السعر';
@@ -52,6 +59,9 @@ if ( localStorage.getItem( 'arabic' ) !== null )
 	accountButton.innerHTML = 'انشاء حساب';
 	emailInput.placeholder = 'عنوان البريد الالكتروني';
 	accountDescription.innerHTML = 'جرب مجاناً | لا تحتاج بطاقة دفع | الغي في اي وقت';
+	emailBlock.innerHTML = 'تسويق<br/>البريد الالكتروني';
+	websiteBlock.innerHTML = 'انشاء<br/>مواقع';
+	marketingBlock.innerHTML = 'تسويق<br/> الي';
 } else 
 {
 	localStorage.clear();
