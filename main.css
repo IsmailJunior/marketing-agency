@@ -41,6 +41,10 @@ body {
 
 /* Utilities */
 
+.rtl-text {
+	text-align: right;
+}
+
 .container {
 	padding: 0 10%;
 }
@@ -336,30 +340,6 @@ header {
 	position: relative;
 	font-size: var(--healine);
 	z-index: 1;
-}
-
-.hero_section .left_section h1::before {
-	position: absolute;
-	content: '';
-	top: 5px;
-	left: 0;
-	width: 400px;
-	height: 50px;
-	background-color: yellow;
-	display: inline-block;
-	z-index: -1;
-}
-
-.hero_section .left_section h1::after {
-	position: absolute;
-	content: '';
-	top: 65px;
-	left: 95px;
-	width: 200px;
-	height: 50px;
-	background-color: yellow;
-	display: inline-block;
-	z-index: -1;
 }
 
 .hero_section .left_section p {

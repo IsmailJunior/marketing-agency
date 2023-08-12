@@ -7,7 +7,10 @@ const recourcesLink = document.querySelector( '.resources' );
 const loginLink = document.querySelector( '.login' );
 const signUp = document.querySelector( '.sign-up' );
 const heroTitle = document.querySelector( '.hero-title' );
-
+const heroDescription = document.querySelector( '.hero-description' );
+const accountButton = document.querySelector( '.account-button' );
+const emailInput = document.querySelector( '.email-input' );
+const accountDescription = document.querySelector( '.account-description' );
 if ( localStorage.getItem( 'arabic' ) !== null )
 {
 	switchButton.checked = true;
@@ -35,22 +38,22 @@ switchButton.addEventListener( 'click', ( event ) =>
 if ( localStorage.getItem( 'arabic' ) !== null )
 {
 	linksContainer.classList.add( 'order' );
-	brandLink.innerText = 'شعار';
-	productLink.innerText = 'المنتجات';
-	pricingLink.innerText = 'السعر';
-	recourcesLink.innerText = 'الموارد';
-	loginLink.innerText = 'تسجيل الدخول';
-	signUp.innerText = 'التسجيل';
+	heroTitle.classList.add( 'rtl-text' );
+	heroDescription.classList.add( 'rtl-text' );
+	accountDescription.classList.add( 'rtl-text' );
+	brandLink.innerHTML = 'شعار';
+	productLink.innerHTML = 'المنتجات';
+	pricingLink.innerHTML = 'السعر';
+	recourcesLink.innerHTML = 'الموارد';
+	loginLink.innerHTML = 'تسجيل الدخول';
+	signUp.innerHTML = 'التسجيل';
 	heroTitle.innerHTML = 'اعلانات عبر<br/> مواقع التواصل الاجتماعي';
+	heroDescription.innerHTML = 'منصة موفرة وسهلة الاستخدام،<br/> نمي جمهورك';
+	accountButton.innerHTML = 'انشاء حساب';
+	emailInput.placeholder = 'عنوان البريد الالكتروني';
+	accountDescription.innerHTML = 'جرب مجاناً | لا تحتاج بطاقة دفع | الغي في اي وقت';
 } else 
 {
 	localStorage.clear();
 	linksContainer.classList.remove( 'order' );
-	brandLink.innerText = 'Brand';
-	productLink.innerText = 'Product';
-	pricingLink.innerText = 'Pricing';
-	recourcesLink.innerText = 'Resources';
-	loginLink.innerText = 'Login';
-	signUp.innerText = 'Sign Up';
-	heroTitle.innerHTML = 'Email marketing <br/>and beyond';
 }
