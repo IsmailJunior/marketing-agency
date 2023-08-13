@@ -75,8 +75,18 @@ const transactionalEmailsLink = document.querySelector( '.transactional-emails-l
 const dedicatedSupportLink = document.querySelector( '.dedicated-support-link' );
 const websiteTrackingLink = document.querySelector( '.website-tracking-link' );
 const leftColumn = document.querySelectorAll( '.left_column' );
+const featuresText = document.querySelector( '.features-text' );
+const featuresButton = document.querySelector( '.features-button' );
+const priceTitle = document.querySelector( '.price-title' );
+const priceDescription = document.querySelector( '.price-description' );
+const freeTitlePlan = document.querySelector( '.free-title-plan' );
+const paidTitlePlan = document.querySelector( '.paid-title-plan' );
+const maxTitlePlan = document.querySelector( '.max-title-plan' );
+const paidPlanDescription = document.querySelector( '.paid-plan-description' );
+const freePlanDescription = document.querySelector( '.free-plan-description' );
+const maxPlanDescription = document.querySelector( '.max-plan-description' );
 
-
+console.log( paidPlanDescription )
 
 if ( localStorage.getItem( 'arabic' ) !== null )
 {
@@ -193,6 +203,17 @@ if ( localStorage.getItem( 'arabic' ) !== null )
 	dedicatedSupportLink.innerHTML = 'دعم خاص';
 	marketingAutomationLink.innerHTML = 'تسويق تلقائي';
 	websiteTrackingLink.innerHTML = 'مراقبة نتائج الاعلان';
+	featuresText.innerHTML = '+ 23 ميزة اخرى';
+	featuresButton.innerHTML = 'اكتشف كل الميزات';
+	priceTitle.innerHTML = '<span>سعر لا يقاوم لخطط التسويق</span>';
+	priceDescription.innerHTML = 'خطط ومميزات تشحن عملك في كل مرحة من النمو';
+	freeTitlePlan.innerHTML = 'مجاناً';
+	paidTitlePlan.innerHTML = 'خطط مدفوعة';
+	maxTitlePlan.innerHTML = 'ماكس<sup>2</sup>';
+	freePlanDescription.innerHTML = ':يتضمن';
+	paidPlanDescription.innerHTML = ':كل شيء من مجاناً واكثر';
+	maxPlanDescription.innerHTML = ':كل شيء من مدفوع واكثر'
+
 } else 
 {
 	localStorage.clear();
