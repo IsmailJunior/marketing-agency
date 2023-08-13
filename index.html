@@ -7,6 +7,7 @@
 	<link rel="stylesheet" href="main.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 	<script src="rtl.js" defer></script>
+	<script src="navbar.js" defer></script>
 	<title>Home</title>
 </head>
 <body>
@@ -27,6 +28,11 @@
 					<a class="resources" href="#">Resources</a>
 				</li>
 				</div>
+		<div class="hamburger">
+			<div class="bar1 bar"></div>
+			<div class="bar2 bar"></div>
+			<div class="bar3 bar"></div>
+		</div>
 				<div class="account_items">
 					<li>
 						<a class="login" href="#">Login</a>
@@ -42,9 +48,23 @@
 			</ul>
 		</nav>
 	</header>
-
 	<!-- Main content -->
-
+		<div class="mobile-nav">
+			<ul>
+				<li class="mobile-link">
+					<a class="mobile-nav-link-brand" href="#">Brand</a>
+				</li>
+				<li class="mobile-link">
+					<a class="mobile-nav-link-product" href="#">Product</a>
+				</li>
+				<li class="mobile-link">
+					<a class="mobile-nav-link-pricing" href="#">Pricing</a>
+				</li>
+				<li class="mobile-link">
+					<a class="mobile-nav-link-resources" href="#">Resources</a>
+				</li>
+			</ul>
+		</div>
 	<main>
 		<!-- Hero section start -->
 		<section class="hero_section container inner_space">
@@ -113,7 +133,7 @@
 						<div class="text">
 						<div class="headline">
 							<i class="fa fa-rocket icon-rocket"></i>
-							<h1 class="business-title">Get your business online</h1>
+							<h1 class="business-title specs-title">Get your business online</h1>
 						</div>
 						<div class="description business-description">
 							<p>
@@ -126,12 +146,11 @@
 						<p class="notation business-sub-heading"><span>Free plan</span> for new businesses</p>
 						</div>
 						</div>
-
 						<div class="row">
 						<div class="text">
 						<div class="headline">
 							<i class="fa fa-file-medical icon-customers"></i>
-							<h1 class="customers-title">Engage with customers</h1>
+							<h1 class="customers-title specs-title">Engage with customers</h1>
 						</div>
 						<div class="description customers-description">
 							<p>
@@ -150,7 +169,7 @@
 					<div class="text">
 						<div class="headline">
 							<i class="fa fa-people-group icon-audience"></i>
-							<h1 class="audience-title">Grow your audience</h1>
+							<h1 class="audience-title specs-title">Grow your audience</h1>
 						</div>
 						<div class="description audience-description">
 							<p>
@@ -167,7 +186,7 @@
 					<div class="text">
 						<div class="headline">
 							<i class="fa fa-search-dollar icon-sales"></i>
-							<h1 class="sales-title">Boost online sales</h1>
+							<h1 class="sales-title specs-title">Boost online sales</h1>
 						</div>
 						<div class="description sales-description">
 							<p>
@@ -349,28 +368,28 @@
 						<div class="features_list">
 						<hr>
 							<ul class="space-around">
-								<h4 class="free-plan-description">Including:</h4>
-								<li class="space-around">
+								<h4 class="free-plan-description plans-description">Including:</h4>
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>Email marketing</span>
 								</li>
-								<li class="space-around">
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>Website builder</span>
 								</li>
-								<li class="space-around">
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>Connect a domain</span>
 								</li>
-								<li class="space-around">
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>List for up to 500 contacts</span>
 								</li>
-								<li class="space-around">
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>Landing pages</span>
 								</li>
-								<li class="space-around">
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>Signup and contact forms</span>
 								</li>
@@ -385,32 +404,32 @@
 						<div class="features_list">
 							<hr>
 							<ul class="space-around" id="middle_list">
-								<h4 class="off-white-text paid-plan-description">Everything from Free and more:</h4>
+								<h4 class="off-white-text paid-plan-description plans-description">Everything from Free and more:</h4>
 								<li class="space-around">
 									<i class="fa fa-check"></i>
 									<span>Marketing automation</span>
 								</li>
-								<li class="space-around">
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>List segmentation</span>
 								</li>
-								<li class="space-around">
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>Sales funnels</span>
 								</li>
-								<li class="space-around">
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>Lists for 500+ contacts</span>
 								</li>
-								<li class="space-around">
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>Webinars</span>
 								</li>
-								<li class="space-around">
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>Live chats</span>
 								</li>
-								<li class="space-around">
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>Ecommerce features</span>
 								</li>
@@ -425,28 +444,28 @@
 						<div class="features_list">
 							<hr>
 							<ul class="space-around">
-								<h4 class="max-plan-description">Everything from paid and more:</h4>
-								<li class="space-around">
+								<h4 class="max-plan-description plans-description">Everything from paid and more:</h4>
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>SMS marketing</span>
 								</li>
-								<li class="space-around">
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>Transactional emails</span>
 								</li>
-								<li class="space-around">
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>Account migration support</span>
 								</li>
-								<li class="space-around">
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>Unlimited users</span>
 								</li>
-								<li class="space-around">
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>Dedicated support</span>
 								</li>
-								<li class="space-around">
+								<li class="space-around plans-list-item">
 									<i class="fa fa-check"></i>
 									<span>Single sign-on (SSO)</span>
 								</li>

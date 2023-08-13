@@ -85,8 +85,10 @@ const maxTitlePlan = document.querySelector( '.max-title-plan' );
 const paidPlanDescription = document.querySelector( '.paid-plan-description' );
 const freePlanDescription = document.querySelector( '.free-plan-description' );
 const maxPlanDescription = document.querySelector( '.max-plan-description' );
-
-console.log( paidPlanDescription )
+const mobileBrand = document.querySelector( '.mobile-nav-link-brand' );
+const mobileProduct = document.querySelector( '.mobile-nav-link-product' );
+const mobilePricing = document.querySelector( '.mobile-nav-link-pricing' );
+const mobileResources = document.querySelector( '.mobile-nav-link-resources' );
 
 if ( localStorage.getItem( 'arabic' ) !== null )
 {
@@ -111,22 +113,21 @@ switchButton.addEventListener( 'click', ( event ) =>
 		}, 300 );
 	}
 } );
-console.log( accountButton );
 if ( localStorage.getItem( 'arabic' ) !== null )
 {
 	linksContainer.classList.add( 'order' );
 	leftSection.classList.add( 'order' );
-	column.forEach( ( item ) => item.style.justifyContent = 'end' );
+	column.forEach( ( item ) => item.classList.add( 'column-right' ) );
 	leftColumn.forEach( ( item ) => item.style.order = 2 );
 	spec.forEach( ( item ) => item.style.justifyContent = 'end' );
 	linkIcon.forEach( ( item ) => item.style.order = 2 );
 	productNavLink.style.order = 3;
 	pricingNavLink.style.order = 2;
 	brandNavLink.style.order = 4;
-	largeCompaniesComponent.style.order = 1;
-	entrepreneurComponent.style.order = 4;
-	onlineMarketerComponent.style.order = 3;
-	marketingMangerComponent.style.order = 2;
+	largeCompaniesComponent.classList.add( 'order-1' );
+	entrepreneurComponent.classList.add( 'order-4' );
+	onlineMarketerComponent.classList.add( 'order-3' );
+	marketingMangerComponent.classList.add( 'order-2' );
 	circleBlock.forEach( ( block ) => block.classList.add( 'circle-right' ) );
 	emailControl.classList.add( 'input-left' );
 	accountButton.classList.add( 'button-right' );
@@ -212,7 +213,11 @@ if ( localStorage.getItem( 'arabic' ) !== null )
 	maxTitlePlan.innerHTML = 'ماكس<sup>2</sup>';
 	freePlanDescription.innerHTML = ':يتضمن';
 	paidPlanDescription.innerHTML = ':كل شيء من مجاناً واكثر';
-	maxPlanDescription.innerHTML = ':كل شيء من مدفوع واكثر'
+	maxPlanDescription.innerHTML = ':كل شيء من مدفوع واكثر';
+	mobileBrand.innerHTML = 'شعار';
+	mobileProduct.innerHTML = 'منتجات';
+	mobilePricing.innerHTML = 'اسعار';
+	mobileResources.innerHTML = 'موارد';
 
 } else 
 {

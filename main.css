@@ -12,7 +12,7 @@
 	--heading: x-large;
 	--headeing-2: large;
 	--title: 35px;
-	--healine: 50px;
+	--healine: 40px;
 	--space-in: 10px;
 	--description: 18px;
 	--fotospace: 17px;
@@ -37,9 +37,23 @@
 
 body {
 	background-color: var(--body-color);
+	overflow-x: hidden;
 }
+	.order-1 {
+		order: 1;
+	}
 
-.column
+	.order-2 {
+		order: 2;
+	}
+
+	.order-3 {
+		order: 3;
+	}
+
+	.order-4 {
+		order: 4;
+	}
 
 .spec { 
 	display: flex;
@@ -67,7 +81,6 @@ body {
 
 .row {
 	display: flex;
-	align-items: start;
 	gap: 20px;
 }
 
@@ -195,14 +208,17 @@ body {
 
 .column {
 	display: flex;
-	justify-content: initial;
+}
+
+.column-right {
+	justify-content: end;
 }
 
 /* Navigation Section */
 header {
 	position: sticky;
 	top: 0;
-	z-index: 4;
+	z-index: 5;
 	margin: 0 auto;
 	box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
 	background-color: white;
@@ -264,7 +280,7 @@ header {
 	border: 1px solid #D9DADC;
 	border-radius: 50px; 
 	cursor: pointer;
-	transition: 0.3s ease all, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
+	transition: 0.3s ease transform, left 0.3s cubic-bezier(0.18, 0.89, 0.35, 1.15);
 }
 
 .switch:active::after {
@@ -303,8 +319,13 @@ header {
 	display: flex;
 	background-color: white;
 	height: 470px;
+	overflow-x: hidden;
 	overflow-y: hidden;
 	z-index: -1;
+	background-image: url('./assets/Female.png');
+	background-position: bottom;
+	background-repeat: no-repeat;
+	background-size: 390px;
 }
 
 .hero-title {
@@ -362,6 +383,7 @@ header {
 	position: relative;
 	font-size: var(--healine);
 	z-index: 1;
+	line-height: 80px;
 }
 
 .hero_section .left_section p {
@@ -371,10 +393,6 @@ header {
 }
 
 .hero_section .hero_image {
-	background-position: center;
-	background-size: contain;
-	background-repeat: no-repeat;
-	background-image: url('./assets/Female.png');
 	width: var(--hero-image);
 	height: var(--hero-image);
 	transform: translateX(50px);
@@ -399,6 +417,7 @@ header {
 	border: 1px rgb(184, 183, 183) solid;
 	border-radius: 10px;
 }
+
 .input-left {
 	text-align: right;
 	margin-left: 250px;
@@ -488,7 +507,7 @@ header {
 }
 
 .brands_section .specs_divison .two_column_list .description {
-	margin:35px 0;
+	/* margin:35px 0; */
 	font-weight: 100;
 	font-size: 0.9em;
 }
@@ -611,3 +630,329 @@ header {
 	background-color: white;
 }
 
+.navigation .nav_items .hamburger {
+	display: none;
+}
+
+
+.hamburger .bar {
+	width: 50px;
+	height: 5px;
+	border-radius: 20px;
+	background-color: #663399;
+}
+
+.animateBar1 {
+	animation: flipBar1 1s forwards;
+}
+
+.animateBar2 {
+	animation: flipBar 1s forwards;
+}
+
+.animateBar3 {
+	animation: flipBar3 1s forwards;
+}
+
+@keyframes flipBar {
+	from {
+		transform: scaleX(1);
+		opacity: 1;
+	}
+	to {
+		transform: scaleX(0);
+		opacity: 0;
+	}
+}
+
+@keyframes flipBar1 {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(45deg) translate(4px,10px);
+	}
+}
+
+@keyframes flipBar3 {
+	from {
+		transform: rotate(0);
+	}
+	to {
+		transform: rotate(-45deg) translate(4px,-10px);
+	}
+
+}
+
+@media only screen and (max-width: 1200px) {
+	.hero_section {
+		background-position: 320px 70px;
+		background-size: 370px;
+	}
+
+	.row {
+		flex-wrap: wrap;
+		justify-content: start;
+		margin-left: 50px;
+	}
+
+	.tools_section .people_divison .person_component .details {
+		text-align: center;
+	}
+}
+
+.mobile-nav {
+	text-align: center;
+	width: 250px;
+	background-color: white;
+	height: 100vh;
+	display: none;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	position: fixed;
+	z-index: 4;
+	top: 0;
+	left: -250px;
+	box-shadow: 0 0 30px rgba(0, 0, 0, 0.2);
+	transition: transform 500ms ease;
+}
+
+.mobile-nav .mobile-link{
+	margin: 16px 0;
+}
+
+.open-nav {
+	transform: translateX(250px);
+}
+
+@media only screen and (max-width: 1050px) {
+
+	.mobile-nav {
+		display: flex;
+	}
+
+	.brands-heading {
+		font-size: 30px;
+	}
+
+.navigation .nav_items .hamburger {
+	display: flex;
+	flex-direction: column;
+	gap: 5px;
+	cursor: pointer;
+}
+
+	.navigation .nav_items .links_container {
+		display: none;
+	}
+
+	.hero_section .features_blocks {
+		top: 250px;
+	}
+
+	.hero_section .features_blocks .block {
+		width: 130px;
+		height: 30px;
+		font-size: 10px;
+	}
+
+	.specs_divison .specs-title {
+		font-size: 20px;
+	}
+
+	.hero_section .features_blocks .block .circle-block {
+		top: 30px;
+	}
+
+	.hero_section .left_section {
+		text-align: center;
+	}
+
+	.hero_section .left_section .title {
+		font-size: 30px;
+		line-height: 70px;
+	}
+
+	.hero_section .left_section .hero-description {
+		font-size: 15px;
+	}
+
+	.hero_section .left_section .account-button {
+		width: 200px;
+		margin: 0;
+	}
+
+	.button-right {
+		left: 170px;
+	}
+
+	.hero_section {
+		background-size: 300px;
+		background-position: bottom;
+	}
+
+	.row {
+		flex-wrap: wrap;
+		justify-content: center;
+	}
+
+	.tools_section .people_divison .person_component .details {
+		text-align: center;
+	}
+
+	.column {
+		justify-content: center;
+	}
+
+	.order-1 {
+		order: 4;
+		margin-bottom: 50px;
+	}
+
+	.order-2 {
+		order: 3;
+		margin-bottom: 50px;
+	}
+
+	.order-3 {
+		order: 2;
+		margin-bottom: 50px;
+	}
+
+	.order-4 {
+		order: 1;
+		margin-bottom: 50px;
+
+	}
+
+}
+
+@media only screen and (max-width: 960px) {
+
+	.price_section .price_blocks {
+		flex-direction: column;
+	}
+
+	.plans-description {
+		font-size: 30px;
+	}
+
+	.plans-list-item {
+		font-size: 15px;
+	}
+
+	.price_section .price_divison .price_block {
+		width: 600px;
+	}
+
+	.hero_section {
+		flex-direction: column;
+		height: 750px;
+	}
+
+		.brands-heading {
+		font-size: 25px;
+	}
+
+	.hero_section .features_blocks {
+		top: 500px;
+	}
+
+	 .rtl-text {
+		text-align: center;
+	}
+
+	.order {
+		order: initial;
+	}
+
+	.hero_section .create_account_divsion {
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	.hero_section .create_account_divsion .account-button {
+		left: 340px;
+	}
+
+	.create_account_divsion input {
+		text-align: start;
+		margin:0 130px;
+	}
+}
+
+@media only screen and (max-width: 750px) {
+	.price_section .price_divison .price_blocks {
+		padding: 0;
+		width: 400px;
+	}
+
+	.center_column {
+		padding: 0;
+		margin: 0;
+	}
+
+	.price_section .price_divison .price_block {
+		width: 400px;
+	}
+	.price_section {
+		justify-content: center;
+		width: 500px;
+		padding: 0;
+		margin: 0;
+	}
+	
+}
+
+@media only screen and (max-width: 600px) {
+	.brands_section {
+		justify-content: center;
+		width: 300px;
+		margin: 0 auto;
+	}
+
+	.price_section {
+		display: none;
+	}
+
+	.brands_section .specs_divison {
+		text-align: center;
+		margin: 0 auto;
+	}
+
+	.brands_section .specs_divison .two_column_list {
+		width: 100%;
+		font-size: 20px;
+	}
+	
+	.brands_section .specs_divison .two_column_list .row {
+		margin: 0;
+	}
+
+.brands .logo_brand {
+	width: 30px;
+}
+
+.navigation .nav_items .account_items {
+	display: none;
+}
+
+.left {
+	left: 0;
+}
+	.hero_section  .features_blocks {
+		right: 0px;
+	}
+
+	.hero_section .features_blocks .block {
+		top: 20px;
+		padding: 40px;
+		width: 70px;
+	}
+
+	.hero_section {
+		background-position: 30px bottom;
+	}
+}
